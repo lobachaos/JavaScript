@@ -5,7 +5,7 @@ const pessoa = {
     }
 }
 pessoa.falar()
-const falar = pessoa.falar
+let falar = pessoa.falar
 falar() // conflito entre paradigmas : funcional e OO
 
 const falarDePessoa = pessoa.falar.bind(pessoa)
