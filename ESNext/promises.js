@@ -5,5 +5,5 @@ function falarDepois(segundos, frase) {
         },segundos * 1000)
     })
 }
-// resolve só aceita UM parametro
+// then só aceita UM parametro
 falarDepois(3,'Testando 123').then(frase => frase.concat(' ?!? ')).then(outroParametro => console.log(outroParametro))
