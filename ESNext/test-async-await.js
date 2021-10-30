@@ -3,8 +3,14 @@ const fs = require('fs');
 function lerArquivo(dir) {
     return new Promise((resolve, reject) => {
         fs.readFile(dir, (err, data) => {
-            console.log(err ? 'Error' : 'Lido com Sucesso')
-            err ? reject(err) : resolve(data.toString())
+            const tentaiva = err ? 'Error' : 'Lido com Suceesso'
+            console.log(tentaiva)
+            try {
+                resolve(data.toString())
+            }
+            catch (err) {
+                console.log('Deu ruim')
+            }
         })
     })
 }
