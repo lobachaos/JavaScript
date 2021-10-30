@@ -1,12 +1,11 @@
 const fs = require('fs');
 
 function lerArquivo(dir) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         fs.readFile(dir, (err, data) => {
-            const tentaiva = err ? 'Error' : 'Lido com Suceesso'
-            console.log(tentaiva)
             try {
                 resolve(data.toString())
+                console.log('Lido com Sucesso')
             }
             catch (err) {
                 console.log('Deu ruim')
@@ -14,6 +13,7 @@ function lerArquivo(dir) {
         })
     })
 }
+
 
 let obterDados = async () => {
     const data = await lerArquivo('./dados.txt')
