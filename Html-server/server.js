@@ -5,6 +5,10 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 app.post('/usuarios', (req,resp)=> {
     console.log(req.body)
-    resp.send('Sucess')
+    resp.send('<h1>Incluido com sucesso</h1>')
+})
+app.post('/usuarios/:id', (req,resp)=> {
+    console.log(req.body)
+    resp.send('<h1>Alterado com sucesso</h1>')
 })
 app.listen(3003)

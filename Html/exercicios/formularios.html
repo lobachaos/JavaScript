@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Formularios</title>
+    <style>
+        input,select{
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"],[type="checkbox"]{
+            display: inline
+        }
+
+
+    </style>
 </head>
 <body>
 <h1>Formulario</h1>
 <form action="http://localhost:3003/usuarios" method="POST">
     <label>
+        <input type="hidden" name="id" value="3">
         <input type="text" name="usuario">
         <input type="password" name="senha">
-        <button>Entrar</button>
+        <textarea name="bio" rows="10" cols="30"></textarea>
     </label>
+    <div>
+        <label>
+            <input type="radio" name="tipo" value="admin">Admin
+            <input type="radio" name="tipo" value="regular">Regular
+            <input type="radio" name="tipo" value="professor">Professor
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" name="ativo">Ativo
+        </label>
+    </div>
     <label>
+        <select name="estado">
+            <option value="">Selecione</option>
+            <option value="ac">Acre</option>
+            <option value="mt">Mato Grosso</option>
+            <option value="go">Goiás</option>
+        </select>
     </label>
-
+    <button>Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
 
 </form>
 </body>
