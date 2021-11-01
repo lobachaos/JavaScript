@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,21 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log(){
+            console.log(this)
+        }
+        // facilitar mostrar no console
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul');
+        lista.parentNode.log()
+        lista.childNodes.log() // tras os espaços como textos
+        const primeiro = lista.firstChild
+        primeiro.log()
+        primeiro.nextSibling.log()
     </script>
 </body>
 

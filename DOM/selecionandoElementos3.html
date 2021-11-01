@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
@@ -22,16 +22,21 @@
 
 <body class="conteudo exercicio">
     <h1>Formulário</h1>
-    <form name="pesquisa" action="http://www.google.com.br/search">
-        <input type="text" name="q" placeholder="Digite o termo...">
+    <form name="pesquisa" action="https://www.google.com.br/search">
+        <label>
+            <input type="text" name="q" placeholder="Digite o termo...">
         <select name="hl">
             <option value="pt-br">Português (Brasil)</option>
             <option value="en-us">Inglês (Americano)</option>
         </select>
+        </label>
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        console.log(document.forms)
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 
