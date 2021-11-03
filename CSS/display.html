@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+    body{
+        font-size: 40px;
+        color: #fff;
+        background-color: coral;
+    }
+    ul{padding: 0}
+    div{background-color: seagreen;}
+    span{background-color: dodgerblue;}
+    li{background-color: purple;}
+    div , span , li{
+        width: 50%; /* ignorado pelo spam por padrao */
+        height: 80px;  /* ignorado pelo spam por padrao */
+        padding-top: 30px;
+        text-align: center;
+        display: inline-block; /* leva em consideração o character em branco */
+        /* ou tira o espaço ou coloca um comentario*/
+    }
     </style>
 </head>
 
 <body>
-    <div>Texto 1</div>
-    <span>Texto 2</span>
+    <div>Texto 1</div><!--
+ --><span>Texto 2</span>
     <span>Texto 3</span>
     <ul>
         <li>Item 1</li>
