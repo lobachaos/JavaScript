@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+        *  O uso do !important é desencorajado
+        *  Seletores mais espacificos
+        *  O Último a ser processado prevalece, desde que nao seja mais especifico que o outro.
+        */
+        p{
+            background-color: #aaa;
+        }
+        .observacao{
+            background-color: red;
+        }
+        p.observacao{
+            background-color: greenyellow;
+            border: solid 4px;
+            padding: 5px;
+            font-size: 30px;
+        }
     </style>
 </head>
 
