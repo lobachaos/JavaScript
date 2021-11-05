@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <title>Texto</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
-        /* ... */
         * {
             margin: 0;
         }
@@ -16,17 +15,45 @@
             flex-direction: column;
             align-items: center;
         }
+
+        p {
+            /* valores padroes para font-size : 1em , 100% , 16px e 12pt */
+            font-size: 32px;
+            font-family: 'Indie Flower', serif;
+            font-weight: 100;
+            font-style: italic;
+            word-spacing: -10px;
+            letter-spacing: 10px;
+            text-align: center;
+            padding-bottom: 35px;
+            padding-top: 10px;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+        }
+        .destaque {
+            color: white;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+        .destaque:active{
+            box-shadow: none;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <p>
-            Que texto
-            <br>legal!!!
-        </p>
-    </div>
-    <a href="http://google.com" class="botao destaque">Google</a>
+<div>
+    <p>
+        Que texto
+        <br>legal!!!
+    </p>
+</div>
+<a href="https://google.com" class="botao destaque">Google</a>
 </body>
 
 </html>
