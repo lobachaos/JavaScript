@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset='UTF-8'>
@@ -9,7 +9,26 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body');
+        const div1 = document.createElement('div');
+        div1.classList.add('destaque')
+        div1.innerHTML = 'Primeiro'
+        body.appendChild(div1)
+
+        const div2 = document.createElement('div');
+        div2.setAttribute('algumacoisa','valor')
+        div2.innerHTML = 'Segundo'
+
+        const div3 = document.createElement('div');
+        const paragraphElement = document.createElement('p');
+        div3.appendChild(paragraphElement)
+        paragraphElement.innerHTML = 'testando 123'
+
+        const text = document.createTextNode('Antes..');
+        div3.insertBefore(text, div3.childNodes[0])
+
+        body.appendChild(div2)
+        body.appendChild(div3)
     </script>
 </body>
 
