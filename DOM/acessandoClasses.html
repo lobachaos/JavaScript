@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset='UTF-8'>
@@ -12,7 +12,13 @@
         Classes
     </div>
     <script>
-        // ...
+        const classes = document.querySelector('div').classList; // Aceita iteração sobre elementos
+        classes.add('destaque')
+        classes.toggle('destaque') // alternancia
+        console.log(`qtd de classes --> ${classes.length}`)
+        classes.toggle('destaque')
+        console.log(`contem ? --> ${classes.contains('destaque')}`)
+        console.log(`qtd de classes apos toggle --> ${classes.length}`)
     </script>
 </body>
 
