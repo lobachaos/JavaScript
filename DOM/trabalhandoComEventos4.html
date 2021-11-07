@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset='UTF-8'>
@@ -22,15 +22,29 @@
 
 <body class="conteudo exercicio">
     <h1>Formulário</h1>
-    <form name="pesquisa" action="http://www.google.com.br/search">
-        <input type="text" name="q" placeholder="Digite o termo...">
+    <form name="pesquisa" action="https://www.google.com.br/search">
+        <label>
+            <input type="text" name="q" placeholder="Digite o termo...">
         <select name="hl">
                 <option value="pt-br">Português (Brasil)</option>
                 <option value="en-us">Inglês (Americano)</option>
             </select>
-        <button wm-submit>Pesquisar</button>
+        </label>
+        <button bt-submit>Pesquisar</button>
     </form>
     <script>
-        // ...
+    const submit = document.querySelector('[bt-submit]')
+    submit.onclick = e => {
+        e.preventDefault()
+        const form = e.target.parentNode
+        const formData = new FormData(form)
+        console.log(formData.get('q'))
+        console.log(formData.has('hl'))
+
+        for (let dado of formData) {
+            console.log(dado)
+        }
+    }
+
     </script>
 </body>

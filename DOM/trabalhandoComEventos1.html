@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset='UTF-8'>
@@ -8,10 +8,17 @@
 </head>
 
 <body class="conteudo exercicio">
-    <div>
-        <a href="https://google.com.br">Google</a>
-    </div>
-    <script>
-        // ...
-    </script>
+<div>
+    <a espera href="https://google.com.br">Google</a>
+</div>
+<script>
+    const link = document.querySelector('[espera]')
+    link.addEventListener("click", e => {
+        e.preventDefault()
+        console.log('Saindo em 5s ...')
+        setTimeout(() => {
+            window.location.href = e.target.href
+        }, 5000)
+    })
+</script>
 </body>
