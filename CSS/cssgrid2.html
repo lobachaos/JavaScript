@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,23 @@
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(3,1fr); /* 1fr 1fr 1fr */
+            grid-template-rows: repeat(3,1fr);
+            /*grid-row-gap: 20px;*/
+            /*grid-column-gap: 20px;*/
+            /*linha coluna */
+            grid-gap: 50px 20px;
+        }
+        .d1 {
+            grid-column: 2 / 4; /* linha / coluna */
+            grid-row: 1 / span 2 ;
+
+            /*row-start column-start row-end column-end*/
+            grid-area: 1 / 1 / 4 / 3;
         }
     </style>
 </head>
